@@ -5823,7 +5823,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kevin.zemon\\.nuget\\packages\\": {}
+    "C:\\Users\\kevin.zemon\\.nuget\\packages\\": {},
+    "C:\\Users\\kevin.zemon\\.dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5834,6 +5835,9 @@
       "packagesPath": "C:\\Users\\kevin.zemon\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kevin.zemon\\RiderProjects\\ClearentCodeChallenge\\ClearentTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Users\\kevin.zemon\\.dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\kevin.zemon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
