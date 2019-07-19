@@ -1,3 +1,4 @@
+using ClearentChallenge;
 using NUnit.Framework;
 
 namespace Tests
@@ -12,7 +13,10 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            var person = new Person();
+            person.ContainedWallets.Add(new Wallet());
+            person.ContainedWallets[0].ContainedCards.Add(CreditCardFactory.CreateCard<VisaBaseCreditCard>(100));
+            Assert.AreEqual((decimal) 10, person.DetermineTotalInterestNextIncrement());
         }
     }
 }

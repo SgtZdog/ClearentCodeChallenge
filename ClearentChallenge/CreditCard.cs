@@ -16,5 +16,10 @@ namespace ClearentChallenge
         public decimal CurrentBalance { get; protected set; }
 
         public abstract void AddInterest();
+
+        public virtual void AddToBalance(decimal moneyToAdd)
+        {
+            CurrentBalance += moneyToAdd;
+        }
     }
 }

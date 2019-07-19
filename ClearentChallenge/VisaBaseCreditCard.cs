@@ -2,7 +2,11 @@ namespace ClearentChallenge
 {
     public class VisaBaseCreditCard : CreditCard
     {
-        internal VisaBaseCreditCard(decimal startingBalance = decimal.Zero) :
+        public VisaBaseCreditCard() : this(decimal.Zero)
+        {
+        }
+
+        internal VisaBaseCreditCard(decimal startingBalance) :
             base("Visa", (decimal) .1, startingBalance)
         {
         }

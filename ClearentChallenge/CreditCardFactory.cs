@@ -2,11 +2,14 @@ using System;
 
 namespace ClearentChallenge
 {
-    public class CreditCardFactory
+    public static class CreditCardFactory
     {
-        public CreditCard CreateCard<TCreditCardType>() where TCreditCardType : CreditCard, new()
+        public static CreditCard CreateCard<TCreditCardType>(decimal startingBalance = decimal.Zero)
+            where TCreditCardType : CreditCard, new()
         {
-            return new TCreditCardType();
+            var creditCard = new TCreditCardType();
+            creditCard.AddToBalance(startingBalance);
+            return creditCard;
         }
     }
 }
