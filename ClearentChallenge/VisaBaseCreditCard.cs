@@ -2,21 +2,16 @@ namespace ClearentChallenge
 {
     public class VisaBaseCreditCard : CreditCard
     {
-        private CreditCard _creditCardImplementation;
-
-        internal VisaBaseCreditCard() :
-            base("Visa", (decimal) .1, useSimpleInterest: true, startingBalance: 0)
+        internal VisaBaseCreditCard(decimal startingBalance = decimal.Zero) :
+            base("Visa", (decimal) .1, startingBalance)
         {
         }
 
-        public override decimal PredictInterest()
-        {
-            throw new System.NotImplementedException();
-        }
+        public override decimal NextInterestIncrement => CurrentBalance * InterestRate;
 
         public override void AddInterest()
         {
-            throw new System.NotImplementedException();
+            CurrentBalance += NextInterestIncrement;
         }
     }
 }
